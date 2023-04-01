@@ -25,4 +25,5 @@ delete '/gyms/:id', to: 'gyms#destroy'
 # Admins
 post '/admins', to: 'admins#create'
 get '/admins/:id', to: 'admins#show'
+ get "/", to: "admins#index"
 end
