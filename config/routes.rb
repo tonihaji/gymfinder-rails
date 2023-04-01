@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :gyms
+  # get 'auth/create'
+  # resources :users
+  # resources :gyms
+
   # # resources :users, only: [:show]
   # # resources :gyms
   # # resources :admins, only: [:create, :show]
