@@ -3,13 +3,29 @@ Rails.application.routes.draw do
   # get 'auth/create'
   # resources :users
   # resources :gyms
+  # Users resource
+get '/users/:id', to: 'users#show'
 
-   resources :users, only: [:show]
-   resources :gyms
-   resources :admins, only: [:create]
-  get '/current_admin', to: 'application#current_admin'
-  get '/profile', to: 'admins#profile'
-  post '/login', to: 'auth#create'
+# Gyms resource
+resources :gyms
+
+# Admins resource
+post '/admins', to: 'admins#create'
+
+# Custom routes
+get '/current_admin', to: 'application#current_admin'
+get '/profile', to: 'admins#profile'
+post '/login', to: 'auth#create'
+
+
+
+
+  #  resources :users, only: [:show]
+  #  resources :gyms
+  #  resources :admins, only: [:create]
+  # get '/current_admin', to: 'application#current_admin'
+  # get '/profile', to: 'admins#profile'
+  # post '/login', to: 'auth#create'
 
 #gym routes
 get "/", to: "gyms#index"
