@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 get '/users/:id', to: 'users#show'
 
 # Gyms resource
-resources :gyms
+# resources :gyms
 
 # Admins resource
 post '/admins', to: 'admins#create'
