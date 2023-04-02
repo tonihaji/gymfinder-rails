@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
 #gym routes
 get "/", to: "gym#index"
- get '/gym/:id', to: 'gym#show', 
- post '/gym', to: 'gym#create', 
- delete '/gym/:id', to: 'gym#destroy'
+ get '/gyms/:id', to: 'gyms#show', 
+ post '/gyms', to: 'gyms#create', 
+ delete '/gyms/:id', to: 'gyms#destroy'
 
 # # users
  get "users", to: "users#index"
