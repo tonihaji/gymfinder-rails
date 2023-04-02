@@ -27,6 +27,7 @@ class ApplicationController < ActionController::API
     if decoded_token
       admin_id = decoded_token[0]['admin_id']
       @admin = Admin.find_by(id: admin_id)
+      render json: @admin
     end
   end
 
