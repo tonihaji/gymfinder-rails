@@ -1,5 +1,5 @@
-# class SessionsController < ApplicationController
-#   def create
-#     # ...
-#   end
-# end
+class SessionsController < ApplicationController
+  def create
+    # ...
+  end
+end
