@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   post '/login', to: 'auth#create'
 
 #gym routes
-get "/", to: "gyms#index"
-# get '/gyms/:id', to: 'gyms#show', 
-# post '/gyms', to: 'gyms#create', 
-# delete '/gyms/:id', to: 'gyms#destroy'
+get "/", to: "gym#index"
+ get '/gym/:id', to: 'gym#show', 
+ post '/gym', to: 'gym#create', 
+ delete '/gym/:id', to: 'gym#destroy'
 
 # # users
  get "users", to: "users#index"
