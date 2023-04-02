@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   post '/login', to: 'auth#create'
 
 #gym routes
-get "/", to: "gym#index"
+get "/", to: "gyms#index"
 # get '/gyms/:id', to: 'gyms#show', 
 # post '/gyms', to: 'gyms#create', 
 # delete '/gyms/:id', to: 'gyms#destroy'
