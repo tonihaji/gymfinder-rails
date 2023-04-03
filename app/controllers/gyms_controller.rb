@@ -1,5 +1,5 @@
 class GymsController < ApplicationController
-  skip_before_action :authorized, only: %i[ index ]
+  skip_before_action :authorized, only: [:index, :create, :show, :update, :destroy]
 
   # GET /gyms
   def index
@@ -22,7 +22,7 @@ class GymsController < ApplicationController
   def create
     gym = current_admin.gyms.new(gym_params)
     if gym.save
-      render json: gym , status: :created, location: gym
+      render json: gym , status: :created
     else
       render json: gym.errors, status: :unprocessable_entity
     end

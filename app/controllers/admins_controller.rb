@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
   
-  skip_before_action :authorized, only: %i[ create ]
+  skip_before_action :authorized, only: [:index, :create, :show, :update, :destroy]
 
   def profile
     render json: { admin: AdminSerializer.new(current_admin) }, status: :accepted
