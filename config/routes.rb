@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
  
   resources :users, only: [:show]
-  #  resources :gyms
-   #, only: [:index, :create]
+    resources :gyms
+   , only: [:index, :create]
   resources :admins, only: [:create]
   get '/current_admin', to: 'application#current_admin'
   get '/profile', to: 'admins#profile'
@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
 
 #gym routes
-  get "/gyms", to: "gyms#index"
-  post "/gyms", to: "gyms#create"
+  #get "/gyms", to: "gyms#index"
+ # post "/gyms", to: "gyms#create"
 #   get '/gyms/:id', to: 'gyms#show', 
 #  delete '/gyms/:id', to: 'gyms#destroy'
 #   patch '/gyms/:id' , to: 'gyms#update'
