@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
   resources :users, only: [:show]
-   resources :gyms
+  #  resources :gyms
    #, only: [:index, :create]
   resources :admins, only: [:create]
   get '/current_admin', to: 'application#current_admin'
@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
 
 #gym routes
-#  get "/", to: "gyms#index"
+  get "/", to: "gyms#index"
+  post "/gyms", to: "gyms#create"
 #   get '/gyms/:id', to: 'gyms#show', 
 #  delete '/gyms/:id', to: 'gyms#destroy'
 #   patch '/gyms/:id' , to: 'gyms#update'
