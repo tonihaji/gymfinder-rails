@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 
 #gym routes
-  get "/", to: "gyms#index"
+  get "/gyms", to: "gyms#index"
   post "/gyms", to: "gyms#create"
 #   get '/gyms/:id', to: 'gyms#show', 
 #  delete '/gyms/:id', to: 'gyms#destroy'
